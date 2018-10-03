@@ -24,14 +24,15 @@ Where @NamedAttributeNode will define the target property/s that should be fetch
 
 After the entity graph is defined we cand use it in query or find methods to override fetchType semantics. 
 
-The next code will fetch a Movie with all MovieActors and their MovieActorAwards.
+The next code will fetch a Movie with all MovieActors and their MovieActorAwards(one to many relationships).
 
 **One movie = > all actors => all their awards**
+               
+       Movie ----> MovieActors -----> MovieActorsAwards
+        id         id                    id
+        name       actorName             awardName
+                   movie.id              actor.id
 
-**Movie      MovieActors      MovieActorsAwards
-  id         id                    id
-  name       actorName             awardName
-             movie.id              actor.id**
 
      @NamedEntityGraph(  
     name = "movieWithActorsAndAwards",
