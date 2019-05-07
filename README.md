@@ -50,3 +50,10 @@ The next code will fetch a Movie with all MovieActors and their MovieActorAwards
 )
 
      
+## Jackson-bidirectional-relationships-and-infinite-recursion 1
+
+1. Jackson json infinite recursion problem
+2. Serialize entities with bidirectional relationship
+3. Deserialize
+
+[1] https://www.baeldung.com/jackson-bidirectional-relationships-and-infinite-recursion
